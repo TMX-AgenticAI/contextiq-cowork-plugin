@@ -13,6 +13,18 @@ ContextIQ connects Cowork and Claude Desktop to your organization's knowledge so
 | **Governed Query** | Ask questions answered from authorized enterprise sources with cited evidence |
 | **Source Discovery** | List available knowledge sources scoped to your entitlements |
 
+### Slash Commands
+
+Type these commands directly in Cowork or Claude Desktop to invoke ContextIQ explicitly:
+
+| Command | Description |
+|---|---|
+| `/contextiq:ask <question>` | Query authorized enterprise knowledge for a direct, cited answer |
+| `/contextiq:sources` | List the knowledge sources available to you |
+| `/contextiq:research <topic>` | Produce a structured research briefing from enterprise knowledge sources |
+
+**`/contextiq:research`** returns a formal briefing organized into five sections: **Executive Summary**, **Key Findings** (each finding attributed to its source), **Sources** (with excerpts), **Coverage Gaps** (what the available sources did not address), and **Open Questions** (what would require additional sources to answer). It never speculates beyond what the sources explicitly state. If results are thin on the first query, it retries with a refined formulation before compiling the briefing.
+
 ---
 
 ## Requirements

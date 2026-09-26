@@ -9,6 +9,12 @@
     "url": "https://contextiq.us"
   },
   "homepage": "https://contextiq.us",
+  "documentation": "https://contextiq.us/docs.html",
+  "support": "https://contextiq.us/#contact",
+  "privacy_policies": [
+    "https://contextiq.us/privacy.html"
+  ],
+  "terms_of_service": "https://contextiq.us/terms.html",
   "repository": "https://github.com/TMX-AgenticAI/contextiq-cowork-plugin",
   "license": "MIT",
   "keywords": [

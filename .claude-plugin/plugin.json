@@ -1,8 +1,9 @@
 {
   "name": "contextiq",
+  "displayName": "ContextIQ",
   "version": "1.0.1",
   "icon": "./icon.png",
-  "description": "Governed enterprise knowledge access with citations, entitlement scoping, and audit-ready answer paths. Query your organization's knowledge sources through AI assistants with evidence-backed responses.",
+  "description": "Governed enterprise knowledge access for Claude: cited, entitlement-scoped, audit-ready answers from your organization's knowledge sources.",
   "author": {
     "name": "TechMatrix AI Systems",
     "url": "https://contextiq.us"

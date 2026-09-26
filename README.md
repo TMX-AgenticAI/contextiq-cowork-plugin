@@ -130,6 +130,14 @@ For admin-side issues (CloudFormation, S3 publishing, SES), see the [Quickstart 
 
 ---
 
+## Security model
+
+- `contextiq-setup` downloads **configuration JSON only** (HTTPS-only, schema-validated, saved to `~/.contextiq/`) — nothing downloaded is ever executed. You run it yourself; the plugin never runs it for you.
+- The MCP server entry always runs `contextiq-mcp-proxy`, the file **shipped inside this plugin** — no code is fetched at install or run time.
+- Credentials: your password goes only to AWS Cognito over HTTPS; tokens are cached locally in `~/.contextiq/auth.json`.
+
+---
+
 ## License
 
 MIT — see [LICENSE](LICENSE) for details.

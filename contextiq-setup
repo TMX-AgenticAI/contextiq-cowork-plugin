@@ -18,6 +18,11 @@ Admin setup (requires AWS CLI):
 
 Re-run when you see a "session expired" error (~30 days).
 No external dependencies — uses Python stdlib + aws CLI only.
+
+Security contract: the only thing this script ever downloads is a connection
+configuration JSON (HTTPS-only, schema-validated, saved to ~/.contextiq/) —
+downloaded content is never executed. The MCP server entry it writes always
+runs the contextiq-mcp-proxy file shipped inside this plugin.
 """
 
 from __future__ import annotations
@@ -79,7 +84,14 @@ def _load_connection_config(path: Path) -> dict[str, str]:
 
 
 def _fetch_connection_config(url: str) -> dict[str, str]:
-    """Download a connection config from a URL and save locally."""
+    """Download a connection config from a URL and save locally.
+
+    Configuration DATA only — the JSON is schema-validated and written to
+    disk; nothing downloaded is ever executed. HTTPS is required."""
+    if not url.lower().startswith("https://"):
+        raise ValueError(
+            "connection config URLs must be https:// (got a non-HTTPS URL)"
+        )
     print(f"Downloading connection config from: {url}")
     req = urllib.request.Request(url, method="GET")
     with urllib.request.urlopen(req, timeout=30) as resp:

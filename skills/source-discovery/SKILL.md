@@ -24,4 +24,4 @@ Use this skill when the user wants to understand what enterprise knowledge sourc
 - Only show sources the user is entitled to access
 - Group sources by type or domain when presenting multiple sources
 - If no sources are available, guide the user to contact their administrator
-- If the MCP server is not connected, guide the user to run `./contextiq-setup` — they need a setup URL or config file from their admin. If they are the admin, point them to the quickstart guide: https://contextiq-releases.s3.us-west-2.amazonaws.com/essentials/latest/templates/README.md
+- If the MCP server is not connected, guide the user to run `python3 contextiq-setup` — they need a setup URL or config file from their admin. If they are the admin, point them to the quickstart guide: https://contextiq-releases.s3.us-west-2.amazonaws.com/essentials/latest/templates/README.md

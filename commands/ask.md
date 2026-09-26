@@ -19,4 +19,4 @@ Query ContextIQ for a governed, cited answer to the question in $ARGUMENTS.
 
 4. Never fabricate or infer beyond what the sources explicitly state. If the answer is partial, say so and cite what was found.
 
-5. If the MCP server is not connected, guide the user to run `./contextiq-setup` with the setup URL or config file provided by their admin. If they are the admin, point them to the quickstart guide: https://contextiq-releases.s3.us-west-2.amazonaws.com/essentials/latest/templates/README.md
+5. If the MCP server is not connected, guide the user to run `python3 contextiq-setup` with the setup URL or config file provided by their admin. If they are the admin, point them to the quickstart guide: https://contextiq-releases.s3.us-west-2.amazonaws.com/essentials/latest/templates/README.md

@@ -26,4 +26,4 @@ Use this skill when the user asks a question that should be answered from enterp
 - If the query returns no results, tell the user no authorized sources matched and suggest refining the question
 - Do not fabricate answers beyond what the sources provide
 - Respect entitlement boundaries — the system only returns content the user is authorized to access
-- If the MCP server is not connected, guide the user to run `./contextiq-setup` — they need a setup URL or config file from their admin. If they are the admin, point them to the quickstart guide: https://contextiq-releases.s3.us-west-2.amazonaws.com/essentials/latest/templates/README.md
+- If the MCP server is not connected, guide the user to run `python3 contextiq-setup` — they need a setup URL or config file from their admin. If they are the admin, point them to the quickstart guide: https://contextiq-releases.s3.us-west-2.amazonaws.com/essentials/latest/templates/README.md

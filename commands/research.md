@@ -33,4 +33,4 @@ Produce a structured research briefing on the topic in $ARGUMENTS using ContextI
    - Suggest a narrower or differently framed topic
    - Offer to run `/contextiq:sources` to show what knowledge is available
 
-6. If the MCP server is not connected, guide the user to run `./contextiq-setup` with the setup URL or config file provided by their admin. If they are the admin, point them to the quickstart guide: https://contextiq-releases.s3.us-west-2.amazonaws.com/essentials/latest/templates/README.md
+6. If the MCP server is not connected, guide the user to run `python3 contextiq-setup` with the setup URL or config file provided by their admin. If they are the admin, point them to the quickstart guide: https://contextiq-releases.s3.us-west-2.amazonaws.com/essentials/latest/templates/README.md

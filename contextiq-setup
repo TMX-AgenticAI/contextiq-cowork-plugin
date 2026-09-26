@@ -6,15 +6,15 @@ deployment configuration, authenticates with Cognito, caches tokens,
 and writes the Claude Desktop config so the MCP proxy connects automatically.
 
 User setup (no AWS CLI needed):
-  ./contextiq-setup                                    # auto-finds connection config
-  ./contextiq-setup --config ~/Downloads/contextiq-connection.json
-  ./contextiq-setup --url https://s3.../contextiq-connection.json
-  ./contextiq-setup --username user@co.com             # prompt for password only
+  python3 contextiq-setup                                    # auto-finds connection config
+  python3 contextiq-setup --config ~/Downloads/contextiq-connection.json
+  python3 contextiq-setup --url https://s3.../contextiq-connection.json
+  python3 contextiq-setup --username user@co.com             # prompt for password only
 
 Admin setup (requires AWS CLI):
-  ./contextiq-setup --export-config                    # generate config file locally
-  ./contextiq-setup --export-config --publish          # upload to S3, get shareable URL
-  ./contextiq-setup --export-config --publish --email-to user1@co.com,user2@co.com
+  python3 contextiq-setup --export-config                    # generate config file locally
+  python3 contextiq-setup --export-config --publish          # upload to S3, get shareable URL
+  python3 contextiq-setup --export-config --publish --email-to user1@co.com,user2@co.com
 
 Re-run when you see a "session expired" error (~30 days).
 No external dependencies — uses Python stdlib + aws CLI only.
@@ -251,8 +251,8 @@ Step 1: Install the ContextIQ plugin in Cowork
 
 Step 2: Run the setup script
   - Open a terminal in the plugin directory
-  - Run: ./contextiq-setup --url "{config_url}"
-  - Or download the config file from the link below and run: ./contextiq-setup
+  - Run: python3 contextiq-setup --url "{config_url}"
+  - Or download the config file from the link below and run: python3 contextiq-setup
 
 Step 3: Sign in
   - Enter your username ({recipient}) and password when prompted
@@ -282,8 +282,8 @@ Powered by ContextIQ — https://contextiq.us
 
 <h3 style="color: #16213e;">Step 2: Run the setup script</h3>
 <p>Open a terminal in the plugin directory and run:</p>
-<pre style="background: #f5f5f5; padding: 12px; border-radius: 6px; font-size: 14px;">./contextiq-setup --url "{config_url}"</pre>
-<p>Or <a href="{config_url}">download the connection config</a> to your Downloads folder, then run <code>./contextiq-setup</code> — it auto-detects the file.</p>
+<pre style="background: #f5f5f5; padding: 12px; border-radius: 6px; font-size: 14px;">python3 contextiq-setup --url "{config_url}"</pre>
+<p>Or <a href="{config_url}">download the connection config</a> to your Downloads folder, then run <code>python3 contextiq-setup</code> — it auto-detects the file.</p>
 
 <h3 style="color: #16213e;">Step 3: Sign in</h3>
 <p>Enter your username (<strong>{recipient}</strong>) and password when prompted. If this is your first sign-in, check your email for a temporary password from ContextIQ.</p>
@@ -401,7 +401,7 @@ def _export_config(args: argparse.Namespace) -> None:
             print(f"\nShareable URL (expires in {args.url_expiry // 86400} days):")
             print(f"  {config_url}")
             print(f"\nUsers can run:")
-            print(f"  ./contextiq-setup --url \"{config_url}\"")
+            print(f"  python3 contextiq-setup --url \"{config_url}\"")
         except RuntimeError as e:
             print(f"\nError publishing to S3: {e}", file=sys.stderr)
             sys.exit(1)
@@ -428,8 +428,8 @@ def _export_config(args: argparse.Namespace) -> None:
         print(f"\nTo share with users, either:")
         print(f"  1. Email this file directly, or")
         print(f"  2. Re-run with --publish to upload to S3 and get a shareable URL:")
-        print(f"     ./contextiq-setup --export-config --publish")
-        print(f"     ./contextiq-setup --export-config --publish --email-to user1@co.com,user2@co.com")
+        print(f"     python3 contextiq-setup --export-config --publish")
+        print(f"     python3 contextiq-setup --export-config --publish --email-to user1@co.com,user2@co.com")
 
 
 # ---------------------------------------------------------------------------

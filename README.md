@@ -47,7 +47,7 @@ End users do not need AWS CLI, direct backend access, or any infrastructure setu
 Your admin will share a setup link via email, Slack, or your internal wiki.
 
 ```bash
-./contextiq-setup --url "https://your-setup-link..."
+python3 contextiq-setup --url "https://your-setup-link..."
 ```
 
 Enter your username and password when prompted. Done.
@@ -57,7 +57,7 @@ Enter your username and password when prompted. Done.
 If your admin sent a `contextiq-connection.json` file:
 
 1. Save it to your Downloads folder
-2. Run `./contextiq-setup`
+2. Run `python3 contextiq-setup`
 
 The script auto-detects the config from these locations (checked in order):
 - `~/.contextiq/contextiq-connection.json`
@@ -68,7 +68,7 @@ The script auto-detects the config from these locations (checked in order):
 You can also point to the file explicitly:
 
 ```bash
-./contextiq-setup --config /path/to/contextiq-connection.json
+python3 contextiq-setup --config /path/to/contextiq-connection.json
 ```
 
 ### Admin self-setup (fallback)
@@ -76,7 +76,7 @@ You can also point to the file explicitly:
 If you are the admin who deployed ContextIQ and have AWS CLI configured with access to the deployment account, you can skip the config file and connect directly via CloudFormation discovery:
 
 ```bash
-./contextiq-setup --username your-email@company.com
+python3 contextiq-setup --username your-email@company.com
 ```
 
 The script discovers the deployment automatically from CloudFormation stack outputs. See the [Quickstart Guide](https://contextiq-releases.s3.us-west-2.amazonaws.com/essentials/latest/templates/README.md) for full admin setup and team distribution options.

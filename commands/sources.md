@@ -17,4 +17,4 @@ Retrieve and present the enterprise knowledge sources the current user is author
    - Inform the user that no authorized sources are currently available
    - Suggest contacting their administrator to confirm their entitlements are configured
 
-5. If the MCP server is not connected, guide the user to run `./contextiq-setup` with the setup URL or config file provided by their admin. If they are the admin, point them to the quickstart guide: https://contextiq-releases.s3.us-west-2.amazonaws.com/essentials/latest/templates/README.md
+5. If the MCP server is not connected, guide the user to run `python3 contextiq-setup` with the setup URL or config file provided by their admin. If they are the admin, point them to the quickstart guide: https://contextiq-releases.s3.us-west-2.amazonaws.com/essentials/latest/templates/README.md

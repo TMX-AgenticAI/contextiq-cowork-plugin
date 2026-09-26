@@ -3,7 +3,7 @@
   "displayName": "ContextIQ",
   "version": "1.0.1",
   "icon": "./icon.png",
-  "description": "Governed enterprise knowledge access for Claude: cited, entitlement-scoped, audit-ready answers from your organization's knowledge sources.",
+  "description": "Governed enterprise knowledge and agent orchestration for Claude: cited, entitlement-scoped, audit-ready answers from your organization's sources.",
   "author": {
     "name": "TechMatrix AI Systems",
     "url": "https://contextiq.us"
@@ -11,5 +11,14 @@
   "homepage": "https://contextiq.us",
   "repository": "https://github.com/TMX-AgenticAI/contextiq-cowork-plugin",
   "license": "MIT",
-  "keywords": ["contextiq", "enterprise-knowledge", "governed-access", "citations", "mcp", "rag", "compliance", "audit"]
+  "keywords": [
+    "contextiq",
+    "enterprise-knowledge",
+    "governed-access",
+    "citations",
+    "mcp",
+    "rag",
+    "compliance",
+    "audit"
+  ]
 }

@@ -2,7 +2,7 @@
   "name": "contextiq",
   "displayName": "ContextIQ",
   "version": "1.0.1",
-  "icon": "./icon.png",
+  "icon": "./icon.svg",
   "description": "Governed enterprise knowledge and agent orchestration for Claude: cited, entitlement-scoped, audit-ready answers from your organization's sources.",
   "author": {
     "name": "TechMatrix AI Systems",
